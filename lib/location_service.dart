@@ -10,7 +10,7 @@ class LocationService {
   final String key = 'AIzaSyDoOryVGooR7KW37r8Ao_CxD8xKD6X30XY';
 
 // Aqui instanciei algumas url's com dados dos locais do Google, via http, como informado no documento de referência do Google, assim como vou fazer outras vezes e uma INPUT em formato STRING, com função assincrona.
-// Também foram usados alguns parâmetros em JavaScript para decodificação e conversão do lado do cliente.
+// Também foram usados alguns parâmetros em Java para decodificação e conversão do lado do cliente.
   Future<String> getPlaceId(String input) async {
     final String url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=$input&inputtype=textquery&key=$key';
 
@@ -41,7 +41,7 @@ class LocationService {
 
 // Aqui está declarada uma variável de resultado com as "routes" rotas, a bússola, o ponto de início e fim do trajeto, e todos os parâmetros do trajeto.
 // Também há declarações das polylines, que são os polígonos usados para traçar a rota entre as ruas no mapa.
-// Essa parte envolveu JavaScript também.
+// Essa parte envolveu Java também.
     var results = {
       'bounds_ne': json['routes'][0]['bounds']['northeast'],
       'bounds_sw': json['routes'][0]['bounds']['southwest'],
